@@ -27,3 +27,4 @@ replay_pid*
 src/src/main/resources/application-dev.yml
 
 /src/target/
+/.idea/
