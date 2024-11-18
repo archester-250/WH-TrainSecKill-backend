@@ -1,0 +1,895 @@
+19:12:25.274 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 7140 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:12:25.280 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:12:25.319 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+19:12:25.319 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+19:12:25.967 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:12:25.982 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+19:12:26.185 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:12:26.208 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:12:26.435 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:12:26.443 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:12:26.446 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:12:26.446 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:12:26.503 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:12:26.504 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1185 ms
+19:12:27.121 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+19:12:27.122 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+19:12:27.300 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:12:27.476 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35181566
+19:12:27.477 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:12:27.600 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+19:12:27.658 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:12:27.683 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:12:27.691 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:12:27.695 [restartedMain] INFO  com.pku.WH_SeckillApplication - Started WH_SeckillApplication in 2.828 seconds (process running for 3.828)
+19:12:48.894 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:12:48.894 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:12:48.894 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+19:12:49.044 [http-nio-8080-exec-1] DEBUG c.p.m.U.selectUserByUsername - ==>  Preparing: select * from users where username = ?
+19:12:49.064 [http-nio-8080-exec-1] DEBUG c.p.m.U.selectUserByUsername - ==> Parameters: xuxugege123(String)
+19:12:49.094 [http-nio-8080-exec-1] DEBUG c.p.m.U.selectUserByUsername - <==      Total: 1
+19:13:00.168 [http-nio-8080-exec-2] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:13:00.168 [http-nio-8080-exec-2] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjM1NjksImV4cCI6MTc0MjQzNDY4MH0.Cb75w4rrt-R78CEJS1PyCCGtdCbtOF46ABd7F6iiIiw
+19:13:00.199 [http-nio-8080-exec-2] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:13:00.201 [http-nio-8080-exec-2] DEBUG c.p.m.O.selectOrderByUserId - ==>  Preparing: select * from orders where userId = ?
+19:13:00.202 [http-nio-8080-exec-2] DEBUG c.p.m.O.selectOrderByUserId - ==> Parameters: 2(Long)
+19:13:00.204 [http-nio-8080-exec-2] DEBUG c.p.m.O.selectOrderByUserId - <==      Total: 2
+19:13:14.827 [http-nio-8080-exec-5] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:13:14.828 [http-nio-8080-exec-5] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjM1NjksImV4cCI6MTc0MjQzNDY4MH0.Cb75w4rrt-R78CEJS1PyCCGtdCbtOF46ABd7F6iiIiw
+19:13:14.828 [http-nio-8080-exec-5] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:13:14.828 [http-nio-8080-exec-5] DEBUG c.p.m.O.selectOrderByUserId - ==>  Preparing: select * from orders where userId = ?
+19:13:14.830 [http-nio-8080-exec-5] DEBUG c.p.m.O.selectOrderByUserId - ==> Parameters: 2(Long)
+19:13:14.830 [http-nio-8080-exec-5] DEBUG c.p.m.O.selectOrderByUserId - <==      Total: 2
+19:15:42.355 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+19:15:42.358 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+19:15:43.463 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:15:43.473 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:15:43.550 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 7140 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:15:43.550 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:15:43.708 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:15:43.716 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+19:15:43.764 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:15:43.766 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:15:43.795 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:15:43.796 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:15:43.796 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:15:43.796 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:15:43.826 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:15:43.827 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 275 ms
+19:15:43.836 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService': No qualifying bean of type 'com.pku.service.OrderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+19:15:43.837 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+19:15:43.841 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+19:15:43.855 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field orderService in com.pku.controller.order.OrderController required a bean of type 'com.pku.service.OrderService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.pku.service.OrderService' in your configuration.
+
+19:21:13.386 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 31796 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:21:13.388 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:21:13.416 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+19:21:13.416 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+19:21:13.902 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:21:13.917 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+19:21:14.102 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:21:14.123 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:21:14.352 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:21:14.361 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:21:14.365 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:21:14.365 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:21:14.432 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:21:14.433 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1016 ms
+19:21:14.977 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+19:21:14.978 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+19:21:15.138 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:21:15.307 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@791b8cad
+19:21:15.308 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:21:15.417 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+19:21:15.486 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:21:15.513 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:21:15.530 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:21:15.536 [restartedMain] INFO  com.pku.WH_SeckillApplication - Started WH_SeckillApplication in 2.492 seconds (process running for 2.993)
+19:21:19.535 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:21:19.535 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:21:19.535 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+19:21:19.610 [http-nio-8080-exec-2] DEBUG c.p.m.U.selectUserByUsername - ==>  Preparing: select * from users where username = ?
+19:21:19.626 [http-nio-8080-exec-2] DEBUG c.p.m.U.selectUserByUsername - ==> Parameters: xuxugege123(String)
+19:21:19.645 [http-nio-8080-exec-2] DEBUG c.p.m.U.selectUserByUsername - <==      Total: 1
+19:21:24.168 [http-nio-8080-exec-3] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:21:24.169 [http-nio-8080-exec-3] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjQwNzksImV4cCI6MTc0MjQzNTE5MH0.G3VJmCdS8pxsKg8cxdttCZfTPG1-gnDRUCpehbWyjs4
+19:21:24.195 [http-nio-8080-exec-3] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:21:24.196 [http-nio-8080-exec-3] DEBUG c.p.m.O.selectOrderByUserId - ==>  Preparing: select * from orders where userId = ?
+19:21:24.197 [http-nio-8080-exec-3] DEBUG c.p.m.O.selectOrderByUserId - ==> Parameters: 2(Long)
+19:21:24.199 [http-nio-8080-exec-3] DEBUG c.p.m.O.selectOrderByUserId - <==      Total: 2
+19:21:54.950 [http-nio-8080-exec-4] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:21:54.950 [http-nio-8080-exec-4] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjQwNzksImV4cCI6MTc0MjQzNTE5MH0.G3VJmCdS8pxsKg8cxdttCZfTPG1-gnDRUCpehbWyjs4
+19:21:54.951 [http-nio-8080-exec-4] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:21:54.959 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.pku.mapper.OrderItemMapper.selectOrderItemByOrderId(java.lang.Long)" because "this.orderItemMapper" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.pku.mapper.OrderItemMapper.selectOrderItemByOrderId(java.lang.Long)" because "this.orderItemMapper" is null
+	at com.pku.service.Impl.OrderServiceImpl.getOrderItemById(OrderServiceImpl.java:36)
+	at com.pku.controller.order.OrderController.getOrderItems(OrderController.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+19:22:44.159 [http-nio-8080-exec-6] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:22:44.160 [http-nio-8080-exec-6] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjQwNzksImV4cCI6MTc0MjQzNTE5MH0.G3VJmCdS8pxsKg8cxdttCZfTPG1-gnDRUCpehbWyjs4
+19:22:44.160 [http-nio-8080-exec-6] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:22:44.160 [http-nio-8080-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.pku.mapper.OrderItemMapper.selectOrderItemByOrderId(java.lang.Long)" because "this.orderItemMapper" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.pku.mapper.OrderItemMapper.selectOrderItemByOrderId(java.lang.Long)" because "this.orderItemMapper" is null
+	at com.pku.service.Impl.OrderServiceImpl.getOrderItemById(OrderServiceImpl.java:36)
+	at com.pku.controller.order.OrderController.getOrderItems(OrderController.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+19:22:45.274 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+19:22:45.276 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+19:22:46.383 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:22:46.389 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:22:46.443 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 31796 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:22:46.444 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:22:46.584 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:22:46.593 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+19:22:46.640 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:22:46.642 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:22:46.665 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:22:46.666 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:22:46.666 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:22:46.666 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:22:46.697 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:22:46.697 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 252 ms
+19:22:46.763 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+19:22:46.764 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+19:22:46.849 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+19:22:46.858 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d529f44
+19:22:46.858 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+19:22:46.872 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+19:22:46.879 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:22:46.888 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:22:46.892 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:22:46.894 [restartedMain] INFO  com.pku.WH_SeckillApplication - Started WH_SeckillApplication in 0.474 seconds (process running for 94.352)
+19:22:46.895 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+19:22:48.356 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+19:22:48.358 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+19:22:49.445 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+19:22:49.448 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+19:22:49.502 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 31796 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:22:49.503 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:22:49.635 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:22:49.644 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+19:22:49.682 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:22:49.683 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:22:49.703 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:22:49.704 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:22:49.704 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:22:49.704 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:22:49.733 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:22:49.733 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 229 ms
+19:22:49.796 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+19:22:49.796 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+19:22:49.882 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+19:22:49.890 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37b89d3f
+19:22:49.891 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+19:22:49.903 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+19:22:49.911 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:22:49.920 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:22:49.923 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:22:49.924 [restartedMain] INFO  com.pku.WH_SeckillApplication - Started WH_SeckillApplication in 0.445 seconds (process running for 97.381)
+19:22:49.925 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+19:22:50.232 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:22:50.232 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:22:50.233 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+19:22:50.233 [http-nio-8080-exec-3] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:22:50.234 [http-nio-8080-exec-3] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjQwNzksImV4cCI6MTc0MjQzNTE5MH0.G3VJmCdS8pxsKg8cxdttCZfTPG1-gnDRUCpehbWyjs4
+19:22:50.236 [http-nio-8080-exec-3] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:22:50.238 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.pku.mapper.OrderItemMapper.selectOrderItemByOrderId(java.lang.Long)" because "this.orderItemMapper" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.pku.mapper.OrderItemMapper.selectOrderItemByOrderId(java.lang.Long)" because "this.orderItemMapper" is null
+	at com.pku.service.Impl.OrderServiceImpl.getOrderItemById(OrderServiceImpl.java:36)
+	at com.pku.controller.order.OrderController.getOrderItems(OrderController.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+19:22:51.079 [http-nio-8080-exec-2] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:22:51.079 [http-nio-8080-exec-2] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjQwNzksImV4cCI6MTc0MjQzNTE5MH0.G3VJmCdS8pxsKg8cxdttCZfTPG1-gnDRUCpehbWyjs4
+19:22:51.079 [http-nio-8080-exec-2] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:22:51.080 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.pku.mapper.OrderItemMapper.selectOrderItemByOrderId(java.lang.Long)" because "this.orderItemMapper" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.pku.mapper.OrderItemMapper.selectOrderItemByOrderId(java.lang.Long)" because "this.orderItemMapper" is null
+	at com.pku.service.Impl.OrderServiceImpl.getOrderItemById(OrderServiceImpl.java:36)
+	at com.pku.controller.order.OrderController.getOrderItems(OrderController.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+19:22:51.995 [http-nio-8080-exec-6] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:22:51.996 [http-nio-8080-exec-6] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjQwNzksImV4cCI6MTc0MjQzNTE5MH0.G3VJmCdS8pxsKg8cxdttCZfTPG1-gnDRUCpehbWyjs4
+19:22:51.996 [http-nio-8080-exec-6] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:22:51.996 [http-nio-8080-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.pku.mapper.OrderItemMapper.selectOrderItemByOrderId(java.lang.Long)" because "this.orderItemMapper" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.pku.mapper.OrderItemMapper.selectOrderItemByOrderId(java.lang.Long)" because "this.orderItemMapper" is null
+	at com.pku.service.Impl.OrderServiceImpl.getOrderItemById(OrderServiceImpl.java:36)
+	at com.pku.controller.order.OrderController.getOrderItems(OrderController.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+19:22:57.561 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+19:22:57.564 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+19:23:00.019 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 21984 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:23:00.020 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:23:00.052 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+19:23:00.053 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+19:23:00.500 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:23:00.514 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 JDBC repository interfaces.
+19:23:00.695 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:23:00.708 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:23:00.902 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:23:00.909 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:23:00.912 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:23:00.912 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:23:00.965 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:23:00.965 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 912 ms
+19:23:01.449 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+19:23:01.449 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+19:23:01.613 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:23:01.761 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@480b0194
+19:23:01.762 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:23:01.857 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+19:23:01.919 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:23:01.951 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:23:01.959 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:23:01.972 [restartedMain] INFO  com.pku.WH_SeckillApplication - Started WH_SeckillApplication in 2.271 seconds (process running for 2.742)
+19:23:05.136 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:23:05.136 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:23:05.137 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+19:23:05.209 [http-nio-8080-exec-2] DEBUG c.p.m.U.selectUserByUsername - ==>  Preparing: select * from users where username = ?
+19:23:05.223 [http-nio-8080-exec-2] DEBUG c.p.m.U.selectUserByUsername - ==> Parameters: xuxugege123(String)
+19:23:05.242 [http-nio-8080-exec-2] DEBUG c.p.m.U.selectUserByUsername - <==      Total: 1
+19:23:10.987 [http-nio-8080-exec-3] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:23:10.988 [http-nio-8080-exec-3] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjQxODUsImV4cCI6MTc0MjQzNTI5Nn0.xeRHjd7ueuoLnu152fv1xdgKbEVhQPSeXkO2stJ5G48
+19:23:11.013 [http-nio-8080-exec-3] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:23:11.015 [http-nio-8080-exec-3] DEBUG c.p.m.O.selectOrderByUserId - ==>  Preparing: select * from orders where userId = ?
+19:23:11.015 [http-nio-8080-exec-3] DEBUG c.p.m.O.selectOrderByUserId - ==> Parameters: 2(Long)
+19:23:11.018 [http-nio-8080-exec-3] DEBUG c.p.m.O.selectOrderByUserId - <==      Total: 2
+19:23:15.412 [http-nio-8080-exec-4] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:23:15.412 [http-nio-8080-exec-4] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjQxODUsImV4cCI6MTc0MjQzNTI5Nn0.xeRHjd7ueuoLnu152fv1xdgKbEVhQPSeXkO2stJ5G48
+19:23:15.412 [http-nio-8080-exec-4] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:23:15.417 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.pku.mapper.OrderItemMapper.selectOrderItemByOrderId(java.lang.Long)" because "this.orderItemMapper" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.pku.mapper.OrderItemMapper.selectOrderItemByOrderId(java.lang.Long)" because "this.orderItemMapper" is null
+	at com.pku.service.Impl.OrderServiceImpl.getOrderItemById(OrderServiceImpl.java:36)
+	at com.pku.controller.order.OrderController.getOrderItems(OrderController.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+19:24:36.110 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:24:36.114 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:24:40.302 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 31508 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:24:40.303 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:24:40.330 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+19:24:40.330 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+19:24:40.789 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:24:40.803 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+19:24:40.986 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:24:41.000 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:24:41.205 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:24:41.213 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:24:41.216 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:24:41.216 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:24:41.266 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:24:41.266 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 936 ms
+19:24:41.786 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+19:24:41.787 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+19:24:41.947 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:24:42.095 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d509677
+19:24:42.096 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:24:42.193 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+19:24:42.251 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:24:42.274 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:24:42.284 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:24:42.289 [restartedMain] INFO  com.pku.WH_SeckillApplication - Started WH_SeckillApplication in 2.307 seconds (process running for 2.775)
+19:24:48.491 [http-nio-8080-exec-10] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:24:48.491 [http-nio-8080-exec-10] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:24:48.492 [http-nio-8080-exec-10] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+19:24:48.562 [http-nio-8080-exec-10] DEBUG c.p.m.U.selectUserByUsername - ==>  Preparing: select * from users where username = ?
+19:24:48.577 [http-nio-8080-exec-10] DEBUG c.p.m.U.selectUserByUsername - ==> Parameters: xuxugege123(String)
+19:24:48.597 [http-nio-8080-exec-10] DEBUG c.p.m.U.selectUserByUsername - <==      Total: 1
+19:24:54.806 [http-nio-8080-exec-6] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:24:54.807 [http-nio-8080-exec-6] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjQyODgsImV4cCI6MTc0MjQzNTM5OX0.gegD9ge0uNy3O_RvEyawDHi5y8s7TrsGCOUKZNM2qKs
+19:24:54.833 [http-nio-8080-exec-6] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:24:54.834 [http-nio-8080-exec-6] DEBUG c.p.m.O.selectOrderByUserId - ==>  Preparing: select * from orders where userId = ?
+19:24:54.835 [http-nio-8080-exec-6] DEBUG c.p.m.O.selectOrderByUserId - ==> Parameters: 2(Long)
+19:24:54.837 [http-nio-8080-exec-6] DEBUG c.p.m.O.selectOrderByUserId - <==      Total: 2
+19:24:58.755 [http-nio-8080-exec-3] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:24:58.755 [http-nio-8080-exec-3] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjQyODgsImV4cCI6MTc0MjQzNTM5OX0.gegD9ge0uNy3O_RvEyawDHi5y8s7TrsGCOUKZNM2qKs
+19:24:58.755 [http-nio-8080-exec-3] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:24:58.758 [http-nio-8080-exec-3] DEBUG c.p.m.O.selectOrderItemByOrderId - ==>  Preparing: select * from orderitem where userId = ?
+19:24:58.758 [http-nio-8080-exec-3] DEBUG c.p.m.O.selectOrderItemByOrderId - ==> Parameters: 4(Long)
+19:24:58.865 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'userId' in 'where clause'
+### The error may exist in com/pku/mapper/OrderItemMapper.java (best guess)
+### The error may involve com.pku.mapper.OrderItemMapper.selectOrderItemByOrderId-Inline
+### The error occurred while setting parameters
+### SQL: select * from orderitem where userId = ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'userId' in 'where clause'
+; bad SQL grammar []] with root cause
+java.sql.SQLSyntaxErrorException: Unknown column 'userId' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58)
+	at jdk.proxy4/jdk.proxy4.$Proxy93.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy72.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy74.selectOrderItemByOrderId(Unknown Source)
+	at com.pku.service.Impl.OrderServiceImpl.getOrderItemById(OrderServiceImpl.java:37)
+	at com.pku.controller.order.OrderController.getOrderItems(OrderController.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+19:25:44.636 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:25:44.641 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:25:48.148 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 26736 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:25:48.149 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:25:48.174 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+19:25:48.174 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+19:25:48.615 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:25:48.629 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+19:25:48.821 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:25:48.837 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:25:49.047 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:25:49.054 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:25:49.057 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:25:49.057 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:25:49.104 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:25:49.104 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 929 ms
+19:25:49.568 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+19:25:49.569 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+19:25:49.732 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:25:49.905 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d509677
+19:25:49.907 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:25:50.011 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+19:25:50.065 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:25:50.092 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:25:50.099 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:25:50.103 [restartedMain] INFO  com.pku.WH_SeckillApplication - Started WH_SeckillApplication in 2.274 seconds (process running for 2.747)
+19:25:55.712 [http-nio-8080-exec-5] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:25:55.712 [http-nio-8080-exec-5] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:25:55.712 [http-nio-8080-exec-5] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+19:25:55.786 [http-nio-8080-exec-5] DEBUG c.p.m.U.selectUserByUsername - ==>  Preparing: select * from users where username = ?
+19:25:55.803 [http-nio-8080-exec-5] DEBUG c.p.m.U.selectUserByUsername - ==> Parameters: xuxugege123(String)
+19:25:55.823 [http-nio-8080-exec-5] DEBUG c.p.m.U.selectUserByUsername - <==      Total: 1
+19:26:01.639 [http-nio-8080-exec-3] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:26:01.640 [http-nio-8080-exec-3] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjQzNTUsImV4cCI6MTc0MjQzNTQ2Nn0.RiKIYmqA1zC1lc2DdjloeBAGgeXtlp6E_2xXZRcPrps
+19:26:01.675 [http-nio-8080-exec-3] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:26:01.677 [http-nio-8080-exec-3] DEBUG c.p.m.O.selectOrderByUserId - ==>  Preparing: select * from orders where userId = ?
+19:26:01.678 [http-nio-8080-exec-3] DEBUG c.p.m.O.selectOrderByUserId - ==> Parameters: 2(Long)
+19:26:01.680 [http-nio-8080-exec-3] DEBUG c.p.m.O.selectOrderByUserId - <==      Total: 2
+19:26:05.555 [http-nio-8080-exec-4] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:26:05.556 [http-nio-8080-exec-4] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjQzNTUsImV4cCI6MTc0MjQzNTQ2Nn0.RiKIYmqA1zC1lc2DdjloeBAGgeXtlp6E_2xXZRcPrps
+19:26:05.556 [http-nio-8080-exec-4] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:26:05.560 [http-nio-8080-exec-4] DEBUG c.p.m.O.selectOrderItemByOrderId - ==>  Preparing: select * from orderitem where orderId = ?
+19:26:05.560 [http-nio-8080-exec-4] DEBUG c.p.m.O.selectOrderItemByOrderId - ==> Parameters: 4(Long)
+19:26:05.561 [http-nio-8080-exec-4] DEBUG c.p.m.O.selectOrderItemByOrderId - <==      Total: 0
+19:26:18.207 [http-nio-8080-exec-2] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:26:18.208 [http-nio-8080-exec-2] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjQzNTUsImV4cCI6MTc0MjQzNTQ2Nn0.RiKIYmqA1zC1lc2DdjloeBAGgeXtlp6E_2xXZRcPrps
+19:26:18.209 [http-nio-8080-exec-2] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:26:18.210 [http-nio-8080-exec-2] DEBUG c.p.m.O.selectOrderItemByOrderId - ==>  Preparing: select * from orderitem where orderId = ?
+19:26:18.210 [http-nio-8080-exec-2] DEBUG c.p.m.O.selectOrderItemByOrderId - ==> Parameters: 2(Long)
+19:26:18.213 [http-nio-8080-exec-2] DEBUG c.p.m.O.selectOrderItemByOrderId - <==      Total: 4
+19:31:21.438 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+19:31:21.441 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+19:31:22.530 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:31:22.535 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:31:22.586 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 26736 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:31:22.586 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:31:22.732 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:31:22.739 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+19:31:22.780 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:31:22.781 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:31:22.803 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:31:22.803 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:31:22.803 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:31:22.803 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:31:22.833 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:31:22.833 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 245 ms
+19:31:22.899 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+19:31:22.899 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+19:31:22.983 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+19:31:22.993 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a17715a
+19:31:22.993 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+19:31:23.007 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+19:31:23.015 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:31:23.023 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:31:23.025 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:31:23.027 [restartedMain] INFO  com.pku.WH_SeckillApplication - Started WH_SeckillApplication in 0.465 seconds (process running for 335.671)
+19:31:23.028 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+19:31:24.482 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+19:31:24.483 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+19:31:25.585 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+19:31:25.590 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+19:31:25.647 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 26736 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:31:25.647 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:31:25.781 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:31:25.790 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JDBC repository interfaces.
+19:31:25.832 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:31:25.832 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:31:25.853 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:31:25.853 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:31:25.854 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:31:25.854 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:31:25.887 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:31:25.888 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 240 ms
+19:31:25.954 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+19:31:25.955 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+19:31:26.045 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+19:31:26.056 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5cd22bb2
+19:31:26.057 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+19:31:26.070 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+19:31:26.077 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:31:26.086 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:31:26.088 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:31:26.090 [restartedMain] INFO  com.pku.WH_SeckillApplication - Started WH_SeckillApplication in 0.466 seconds (process running for 338.734)
+19:31:26.090 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+19:31:37.800 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:31:37.800 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:31:37.801 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+19:31:37.801 [http-nio-8080-exec-2] INFO  c.pku.interceptor.JWTUserInterceptor - 用户拦截器生效
+19:31:37.801 [http-nio-8080-exec-2] INFO  c.pku.interceptor.JWTUserInterceptor - token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIsImlzcyI6ImFyY2hlc3Rlci0yNTAiLCJpYXQiOjE3MzEzMjQzNTUsImV4cCI6MTc0MjQzNTQ2Nn0.RiKIYmqA1zC1lc2DdjloeBAGgeXtlp6E_2xXZRcPrps
+19:31:37.803 [http-nio-8080-exec-2] INFO  c.pku.interceptor.JWTUserInterceptor - userId: 2
+19:31:37.805 [http-nio-8080-exec-2] DEBUG c.p.m.O.selectOrderItemByOrderId - ==>  Preparing: select * from orderitem where orderId = ?
+19:31:37.805 [http-nio-8080-exec-2] DEBUG c.p.m.O.selectOrderItemByOrderId - ==> Parameters: 2(Long)
+19:31:37.807 [http-nio-8080-exec-2] DEBUG c.p.m.O.selectOrderItemByOrderId - <==      Total: 4
+19:33:58.248 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+19:33:58.249 [Thread-11] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+19:33:59.336 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+19:33:59.337 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+19:33:59.389 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 26736 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:33:59.389 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:33:59.537 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:33:59.545 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+19:33:59.587 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:33:59.588 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:33:59.616 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:33:59.617 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:33:59.617 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:33:59.617 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:33:59.647 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:33:59.647 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 256 ms
+19:33:59.719 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+19:33:59.719 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+19:33:59.805 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+19:33:59.813 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5997d02a
+19:33:59.814 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+19:33:59.831 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+19:33:59.840 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:33:59.849 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:33:59.851 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:33:59.852 [restartedMain] INFO  com.pku.WH_SeckillApplication - Started WH_SeckillApplication in 0.489 seconds (process running for 492.497)
+19:33:59.853 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+19:34:01.318 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+19:34:01.320 [Thread-15] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+19:34:02.423 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+19:34:02.427 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+19:34:02.475 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 26736 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:34:02.476 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:34:02.598 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:34:02.606 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+19:34:02.644 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:34:02.645 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:34:02.667 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:34:02.667 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:34:02.667 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:34:02.668 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:34:02.696 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:34:02.696 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 219 ms
+19:34:02.757 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+19:34:02.757 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+19:34:02.839 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+19:34:02.846 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2af1f60f
+19:34:02.847 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+19:34:02.858 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+19:34:02.866 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:34:02.872 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:34:02.874 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:34:02.876 [restartedMain] INFO  com.pku.WH_SeckillApplication - Started WH_SeckillApplication in 0.422 seconds (process running for 495.52)
+19:34:02.876 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+19:34:55.196 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+19:34:55.197 [Thread-19] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+19:34:56.294 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+19:34:56.296 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+19:34:56.351 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 26736 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:34:56.351 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:34:56.500 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:34:56.511 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+19:34:56.556 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:34:56.556 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:34:56.580 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:34:56.580 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:34:56.580 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:34:56.580 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:34:56.609 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:34:56.609 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 257 ms
+19:34:56.673 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+19:34:56.673 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+19:34:56.757 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+19:34:56.764 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2da8f129
+19:34:56.764 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+19:34:56.776 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+19:34:56.784 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:34:56.791 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:34:56.793 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:34:56.794 [restartedMain] INFO  com.pku.WH_SeckillApplication - Started WH_SeckillApplication in 0.469 seconds (process running for 549.438)
+19:34:56.795 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+19:34:58.270 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+19:34:58.274 [Thread-23] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+19:34:59.401 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+19:34:59.407 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+19:34:59.594 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 26736 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:34:59.595 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:34:59.949 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:34:59.975 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 JDBC repository interfaces.
+19:35:00.090 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:35:00.092 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:35:00.151 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:35:00.152 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:35:00.152 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:35:00.153 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:35:00.258 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:35:00.258 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 659 ms
+19:35:00.440 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+19:35:00.440 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+19:35:00.744 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+19:35:00.761 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61265972
+19:35:00.761 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+19:35:00.798 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+19:35:00.816 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:35:00.839 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:35:00.844 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:35:00.847 [restartedMain] INFO  com.pku.WH_SeckillApplication - Started WH_SeckillApplication in 1.354 seconds (process running for 553.492)
+19:35:00.848 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+19:35:35.056 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+19:35:35.057 [Thread-27] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+19:35:36.154 [Thread-27] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+19:35:36.155 [Thread-27] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+19:35:36.199 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 26736 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:35:36.199 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:35:36.319 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:35:36.327 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+19:35:36.363 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:35:36.363 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:35:36.384 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:35:36.384 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:35:36.384 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:35:36.384 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:35:36.416 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:35:36.416 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 215 ms
+19:35:36.476 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+19:35:36.477 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+19:35:36.561 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+19:35:36.569 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f134c27
+19:35:36.569 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+19:35:36.582 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+19:35:36.590 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:35:36.598 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:35:36.600 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:35:36.602 [restartedMain] INFO  com.pku.WH_SeckillApplication - Started WH_SeckillApplication in 0.424 seconds (process running for 589.246)
+19:35:36.602 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+19:35:38.056 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+19:35:38.057 [Thread-31] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+19:35:39.149 [Thread-31] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+19:35:39.152 [Thread-31] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
+19:35:39.201 [restartedMain] INFO  com.pku.WH_SeckillApplication - Starting WH_SeckillApplication using Java 22.0.2 with PID 26736 (D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src\target\classes started by 12585 in D:\WH-trainSecKill\WH-TrainSecKill-backend-main\src)
+19:35:39.201 [restartedMain] INFO  com.pku.WH_SeckillApplication - The following 1 profile is active: "dev"
+19:35:39.332 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+19:35:39.339 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+19:35:39.371 [restartedMain] WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+19:35:39.372 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+19:35:39.393 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:35:39.393 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:35:39.393 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:35:39.393 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+19:35:39.422 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:35:39.422 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 220 ms
+19:35:39.487 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Connecting to localhost with guest user, assuming development environment
+19:35:39.487 [restartedMain] INFO  c.r.stream.impl.StreamEnvironment - Using address resolver to always connect to localhost
+19:35:39.564 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Starting...
+19:35:39.572 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43c0db6a
+19:35:39.572 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Start completed.
+19:35:39.583 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+19:35:39.591 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:35:39.598 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:35:39.600 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:35:39.602 [restartedMain] INFO  com.pku.WH_SeckillApplication - Started WH_SeckillApplication in 0.42 seconds (process running for 592.246)
+19:35:39.604 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+19:40:32.887 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown initiated...
+19:40:32.889 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown completed.
